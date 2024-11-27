@@ -1,53 +1,94 @@
-<div align="center">
-  <h2>Olá! Me chamo Cléber Fernando Paixão 👋</h2>
-</div>
+# **Análise de Dados de Acidentes**
 
-<div align="justify">
-  <h3>🔭 Sobre Mim</h3>
-  <p>Atuo como <strong>Analista de Sistemas</strong> e <strong>Product Owner</strong> no setor de tecnologia, com foco em gestão de produtos digitais e soluções empresariais.</p>
-</div>
+## **Descrição do Projeto**
+Este projeto realiza uma análise exploratória de dados de acidentes de trânsito, utilizando dados fornecidos pela Polícia Federal. Ele permite a visualização de estatísticas, gráficos interativos e mapas de acidentes, facilitando a identificação de padrões e insights relevantes.
 
-<div align="justify">
-  <h3>🎓 Formação Acadêmica</h3>
-  <ul>
-    <li>Graduando em <strong>Análise e Desenvolvimento de Sistemas</strong> pela <strong>Universidade Anhembi Morumbi</strong>.</li>
-    <li>Bolsista em <strong>Mestrado Profissional e Especialização</strong> pela <strong>UTFPR/SENAI/Sistema FIEP</strong>.</li>
-  </ul>
-</div>
+---
 
-<div align="justify">
-  <h3>🌟 Experiência e Ferramentas</h3>
-  <ul>
-    <li>ERP <strong>Datasul (TOTVS)</strong>.</li>
-    <li>Ferramentas de análise de dados como <strong>Qlik Sense</strong> e <strong>Power BI</strong>.</li>
-    <li>Explorando linguagens como <strong>Python</strong> e tecnologias de <strong>Inteligência Artificial</strong>.</li>
-  </ul>
-</div>
+## **Autores**
+- **Orientador:** Leonardo Goshi Sanches  
+- **Mentoria:** Jucenir da Silva Serafim  
+- **Discentes:**  
+  - Cléber Fernando Paixão  
+  - Eduardo Felipe Ardigo Braga  
 
-<div align="center">
-  <h3>📊 GitHub Stats</h3>
-  <a href="https://github.com/Teopx">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=SeuUsuario&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SeuUsuario&layout=compact&langs_count=7&theme=dark"/>
-  </a>
-</div>
+---
 
-<div align="justify">
-  <h3>🤝 Conexões</h3>
-  <p>Vamos nos conectar? Fique à vontade para entrar em contato:</p>
-  <ul>
-    <li>📫 <a href="mailto:cleber.paixao@sistemafiep.org.br">E-mail</a></li>
-    <li>🌍 <a href="https://www.linkedin.com/in/cl%C3%A9ber-f-paix%C3%A3o-a02ab173/"  target="_blank">LinkedIn</a></li>
-  </ul>
-</div>
+## **Objetivo**
+Este projeto foi desenvolvido como parte de um trabalho colaborativo no curso do Hub IA SENAI. O principal objetivo é consolidar o aprendizado em análise de dados utilizando Python e bibliotecas como Pandas, Plotly, Seaborn e Streamlit, além de gerar insights para auxiliar a análise de acidentes.
 
-<div align="center">
-  <h3>💻 Tecnologias</h3>
-  <p>
-    <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-    <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-    <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-    <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  </p>
-</div>
+---
 
+## **Principais Funcionalidades**
+1. **Carregamento de Dados**: 
+   - Leitura de arquivos CSV com diferentes configurações de separadores e codificações.  
+2. **Tratamento de Dados**:  
+   - Limpeza de valores nulos.  
+   - Padronização de colunas.  
+   - Criação de uma coluna de data e hora para análises temporais.  
+3. **Análises Estatísticas e Visuais**:  
+   - Resumo estatístico das colunas numéricas.  
+   - Gráficos interativos utilizando Plotly e Streamlit.  
+4. **Interface Interativa**:  
+   - Exibição de tabelas dinâmicas e gráficos para facilitar a análise.  
+   - Filtros para selecionar colunas ou municípios específicos.  
+   - Mapas interativos para visualização geográfica.  
+5. **Métricas de Impacto**: 
+   - Exibição de métricas como número total de mortes e acidentes sem feridos.  
+
+---
+
+## **Requisitos**
+Para executar este projeto, é necessário instalar as dependências listadas no arquivo `requirements.txt`.  
+
+### **Dependências**
+- `matplotlib`  
+- `numpy`  
+- `pandas`  
+- `plotly`  
+- `seaborn`  
+- `streamlit`  
+
+---
+
+## **Instalação**
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Teopx/Acidentes-de-Transito-no-BR.git
+   cd Acidentes-de-Transito-no-BR
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+3. Certifique-se de que os arquivos CSV (`2021.csv`, `2022.csv`, `2023.csv` e `2024.csv`) estão no mesmo diretório que o script principal.
+
+---
+
+## **Como Usar**
+1. Execute o script Streamlit:
+   ```bash
+   streamlit run analise_dados_acidentes.py
+2. Acesse a interface interativa no navegador, que estará disponível no endereço:
+   http://localhost:8501
+3. Explore as funcionalidades:
+   - Visualize tabelas dinâmicas e gráficos interativos.
+   - Filtre os dados por colunas ou municípios.
+   - Analise a distribuição geográfica e as classificações dos acidentes.
+
+---
+
+## **Arquitetura do Código**
+- Funções Principais:
+   - carregar_csv: Carrega arquivos CSV e trata inconsistências.
+   - tratar_valores_nulos: Substitui valores nulos por médias ou modas.
+   - criar_coluna_datetime: Combina colunas de data e hora em um único formato padrão.
+- Pipeline de Análise:
+   - Carregamento e concatenação de dados.
+   - Limpeza e tratamento de valores.
+   - Análises estatísticas e geração de gráficos.
+
+---
+
+## **Exemplos de Uso**
+- Gráficos de Barras: Comparação de classificações e causas de acidentes.
+- Mapas Interativos: Visualização de acidentes com base em latitude e longitude.
+- Gráficos de Pizza: Proporção de diferentes classificações de acidentes.
