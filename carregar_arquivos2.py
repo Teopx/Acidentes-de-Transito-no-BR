@@ -166,3 +166,25 @@ df_filtrado = df_completo[df_completo['municipio'] == municipio_filtro]
 
 # Análises com o DataFrame filtrado
 st.write(df_filtrado)
+
+# Gráfico de barras com o DataFrame filtrado
+st.subheader("Mapa de Localização dos Acidentes")
+fig_mapa = px.scatter_geo(
+    df_completo,
+    lat='latitude',
+    lon='longitude',
+    color='classificacao_acidente',
+    hover_name='municipio',
+    title="Distribuição Geográfica dos Acidentes"
+)
+st.plotly_chart(fig_mapa)
+
+# Gráfico de pizza com a distribuição de classificações
+st.subheader("Distribuição de Classificações de Acidentes")
+fig_pizza = px.pie(df_completo, names='classificacao_acidente', title="Proporção de Classificações")
+st.plotly_chart(fig_pizza)
+
+# Gráfico de barras com a distribuição de tipos de acidentes
+st.metric("Total de Mortes", df_completo['mortos'].sum())
+st.metric("Acidentes sem Feridos", (df_completo['feridos'] == 0).sum())
+st.metric("Total de Acidentes", df_completo.shape[0])
