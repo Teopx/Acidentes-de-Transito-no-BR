@@ -1,9 +1,9 @@
 
 from datetime import datetime
-import pandas as pd
 import os
-import streamlit as st
 import matplotlib.pyplot as plt
+import pandas as pd
+import streamlit as st
 
 
 # CRIANDO A PARTE VISUAL PARA O STREAMLIT
@@ -11,7 +11,7 @@ st.title("Análise de Dados de Acidentes de Trânsito")
 st.sidebar.header("Filtros")
 
 # RELACIONANDO OS CSV
-arquivos_csv = ["2022.csv", "2024.csv", "2021.csv", "2023.csv"]
+arquivos_csv = ["2021.csv", "2022.csv", "2023.csv", "2024.csv"]
 dataframes = []
 
 for caminho in arquivos_csv:
